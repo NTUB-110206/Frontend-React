@@ -3,17 +3,17 @@ import React from 'react'
 const PageFooter = () => {
     return (
 
-        <footer class="page-footer bg-grey-dark-key">
-            <div class="container">
-                <div class="footer-top">
-                    <div class="row">
-                        <div class="col-lg-2 col-md-4 col-6">
-                            <div class="footer-widget">
-                                <h2 class="footer-widget-title">
+        <footer className="page-footer bg-grey-dark-key">
+            <div className="container">
+                <div className="footer-top">
+                    <div className="row">
+                        <div className="col-lg-2 col-md-4 col-6">
+                            <div className="footer-widget">
+                                <h2 className="footer-widget-title">
                                     World
                                 </h2>
 
-                                <ul class="footer-nav">
+                                <ul className="footer-nav">
                                     <li><a href="#">U.N.</a></li>
                                     <li><a href="#">Conflicts</a></li>
                                     <li><a href="#">Terrorism</a></li>
@@ -30,13 +30,13 @@ const PageFooter = () => {
                         </div>
 
 
-                        <div class="col-lg-2 col-md-4 col-6">
-                            <div class="footer-widget">
-                                <h2 class="footer-widget-title">
+                        <div className="col-lg-2 col-md-4 col-6">
+                            <div className="footer-widget">
+                                <h2 className="footer-widget-title">
                                     Politics
                                 </h2>
 
-                                <ul class="footer-nav">
+                                <ul className="footer-nav">
                                     <li><a href="#">Executive</a></li>
                                     <li><a href="#">Senate</a></li>
                                     <li><a href="#">House</a></li>
@@ -51,13 +51,13 @@ const PageFooter = () => {
                         </div>
 
 
-                        <div class="col-lg-2 col-md-4 col-6">
-                            <div class="footer-widget">
-                                <h2 class="footer-widget-title">
+                        <div className="col-lg-2 col-md-4 col-6">
+                            <div className="footer-widget">
+                                <h2 className="footer-widget-title">
                                     Entertainment
                                 </h2>
 
-                                <ul class="footer-nav">
+                                <ul className="footer-nav">
                                     <li><a href="#">Celebrity News</a></li>
                                     <li><a href="#">Movies</a></li>
                                     <li><a href="#">TV News</a></li>
@@ -71,13 +71,13 @@ const PageFooter = () => {
                         </div>
 
 
-                        <div class="col-lg-2 col-md-4 col-6">
-                            <div class="footer-widget">
-                                <h2 class="footer-widget-title">
+                        <div className="col-lg-2 col-md-4 col-6">
+                            <div className="footer-widget">
+                                <h2 className="footer-widget-title">
                                     Business
                                 </h2>
 
-                                <ul class="footer-nav">
+                                <ul className="footer-nav">
                                     <li><a href="#">Markets</a></li>
                                     <li><a href="#">Politics</a></li>
                                     <li><a href="#">Technology</a></li>
@@ -90,13 +90,13 @@ const PageFooter = () => {
                         </div>
 
 
-                        <div class="col-lg-2 col-md-4 col-6">
-                            <div class="footer-widget">
-                                <h2 class="footer-widget-title">
+                        <div className="col-lg-2 col-md-4 col-6">
+                            <div className="footer-widget">
+                                <h2 className="footer-widget-title">
                                     Health
                                 </h2>
 
-                                <ul class="footer-nav">
+                                <ul className="footer-nav">
                                     <li><a href="#">Healthy Living</a></li>
                                     <li><a href="#">Medical Research</a></li>
                                     <li><a href="#">Mental Health</a></li>
@@ -110,13 +110,13 @@ const PageFooter = () => {
                         </div>
 
 
-                        <div class="col-lg-2 col-md-4 col-6">
-                            <div class="footer-widget">
-                                <h2 class="footer-widget-title">
+                        <div className="col-lg-2 col-md-4 col-6">
+                            <div className="footer-widget">
+                                <h2 className="footer-widget-title">
                                     About
                                 </h2>
 
-                                <ul class="footer-nav">
+                                <ul className="footer-nav">
                                     <li><a href="#">Contact Us</a></li>
                                     <li><a href="#">Careers</a></li>
                                     <li><a href="#">Fox Around the World</a></li>
@@ -135,12 +135,12 @@ const PageFooter = () => {
                 </div>
 
 
-                <div class="footer-mid">
-                    <div class="row align-items-center">
-                        <div class="col-md">
-                            <div class="footer-logo-container">
+                <div className="footer-mid">
+                    <div className="row align-items-center">
+                        <div className="col-md">
+                            <div className="footer-logo-container">
                                 <a href="index.html">
-                                    <img src="assets/images/logo-symbol.svg" alt="footer logo" class="footer-logo" />
+                                    <img src="assets/images/logo-symbol.svg" alt="footer logo" className="footer-logo" />
                                 </a>
                             </div>
 
@@ -151,8 +151,8 @@ const PageFooter = () => {
                 </div>
 
 
-                <div class="footer-bottom">
-                    <ul class="footer-bottom-links">
+                <div className="footer-bottom">
+                    <ul className="footer-bottom-links">
                         <li><a href="#">Terms of Use</a></li>
                         <li><a href="#">Accessibility & CC</a></li>
                         <li><a href="#">AdChoices</a></li>
@@ -166,7 +166,7 @@ const PageFooter = () => {
                     </ul>
 
 
-                    <p class="axil-copyright-txt">
+                    <p className="axil-copyright-txt">
                         Copyright © 2021 BCD Teams.
                     </p>
                 </div>

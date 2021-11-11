@@ -4,7 +4,7 @@ import { SideNav, PageHeader, PageContent, PageFooter } from '../components/inde
 
 const DefaultLayout = () => {
   return (
-    <div class="main-content">
+    <div className="main-content">
       <SideNav />
       <PageHeader />
       <PageContent />

@@ -5,7 +5,7 @@ import routes from '../routes'
 
 const PageContent = () => {
     return (
-        <Suspense fallback={"Loading"}>
+        <Suspense fallback={""}>
             <Switch>
                 {routes.map((route, idx) => {
                     return (
