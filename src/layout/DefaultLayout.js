@@ -1,13 +1,14 @@
 import React from 'react'
-import { SideNav, PageHeader, PageFooter } from '../components/index'
+import { SideNav, PageHeader, PageContent, PageFooter } from '../components/index'
 
 
 const DefaultLayout = () => {
   return (
     <div class="main-content">
-        <SideNav/>
-        <PageHeader/>
-        <PageFooter/>
+      <SideNav />
+      <PageHeader />
+      <PageContent />
+      <PageFooter />
     </div>
   )
 }
