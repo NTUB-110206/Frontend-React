@@ -1,11 +1,16 @@
 {
-  "short_name": "Axxon Web",
-  "name": "Axxon Web",
+  "short_name": "BCD",
+  "name": "Bitcoin Direct",
   "icons": [
     {
-      "src": "./assets/img/favicon.png",
-      "sizes": "100x100",
-      "type": "image/png"
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo.png",
+      "type": "image/png",
+      "sizes": "2363x2363"
     }
   ],
   "start_url": ".",

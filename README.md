@@ -1,7 +1,7 @@
 # react-frontend
 ### env
 #### You must fill the following variables in your .env file:
-- Heroku_backend
+- REACT_APP_Heroku_backend
 
 #### requirements package
 ```

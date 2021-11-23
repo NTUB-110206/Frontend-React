@@ -3,7 +3,7 @@ const backend_SERVERURL = process.env.REACT_APP_Heroku_backend
 
 export const getNews = async () => {
     try {
-        let res = await axios.get(backend_SERVERURL + `/newslist`, {
+        let res = await axios.get(backend_SERVERURL + `/newslist?limit=50`, {
             headers: { "content-type": "application/json" }
         })
         return res

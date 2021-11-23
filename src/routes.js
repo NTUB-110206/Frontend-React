@@ -1,8 +1,13 @@
-import React from 'react';
+import React from 'react'
 
-const Main = React.lazy(() => import('./views/Component/Main'));
+const NewsPage = React.lazy(() => import('./views/pages/NewsPage'))
+const TrendPage = React.lazy(() => import('./views/pages/TrendPage'))
+const TutorialPage = React.lazy(() => import('./views/pages/TutorialPage'))
+
 const routes = [
-  { path: '/', name: 'Main', exact: true, component: Main },
-];
+  { path: '/', exact: true, name: 'NewsPage', component: NewsPage },
+  { path: '/trend', exact: true, name: 'TrendPage', component: TrendPage },
+  { path: '/tutorial', exact: true, name: 'TutorialPage', component: TutorialPage },
+]
 
-export default routes;
+export default routes

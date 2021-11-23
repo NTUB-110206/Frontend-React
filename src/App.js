@@ -1,35 +1,20 @@
-import React, { Component } from 'react';
-import { HashRouter, Route, Switch } from 'react-router-dom';
-// import './scss/style.scss';
-// import './css/bootstrap.min.css';
-// // import './css/owl.carousel.min.css';
-// import './css/slick.css';
-// import './css/magnific-popup.css';
-// import './css/animate.css';
-// import './css/style.css';
-
-const loading = (
-  <div className="pt-3 text-center">
-    <div className="sk-spinner sk-spinner-pulse"></div>
-  </div>
-)
+import React, { Component } from 'react'
+import { HashRouter, Route, Switch } from 'react-router-dom'
 
 // Containers
-const TheLayout = React.lazy(() => import('./containers/TheLayout'));
-
+const DefaultLayout = React.lazy(() => import('./layout/DefaultLayout'))
 
 class App extends Component {
-
   render() {
     return (
       <HashRouter>
-        <React.Suspense fallback={loading}>
+        <React.Suspense fallback={""}>
           <Switch>
-            <Route path="/" name="Home" render={props => <TheLayout {...props}/>} />
+            <Route path="/" name="Home" render={(props) => <DefaultLayout {...props} />} />
           </Switch>
         </React.Suspense>
       </HashRouter>
-    );
+    )
   }
 }
 
