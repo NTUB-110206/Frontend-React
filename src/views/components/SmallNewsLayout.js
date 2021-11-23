@@ -1,7 +1,8 @@
 import React from 'react'
 import SmallNewsItem from './SmallNewsItem';
 
-const SmallNewsLayout = () => {
+const SmallNewsLayout = (props) => {
+    const { newslist } = props
     return (
 
         <section className="section-gap section-gap-top__with-text trending-stories">
@@ -13,10 +14,10 @@ const SmallNewsLayout = () => {
 
                 <div className="row">
                     {
-                        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item, index) => {
+                        newslist.map((item, index) => {
                             return (
                                 <div className="col-lg-6">
-                                    <SmallNewsItem key={index} />
+                                    <SmallNewsItem key={index} news={item}/>
                                 </div>
                             )
                         })

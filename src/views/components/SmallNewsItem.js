@@ -1,23 +1,26 @@
 import React from 'react'
 
-const SmallNewsItem = () => {
+const SmallNewsItem = (props) => {
+    const { news } = props
     return (
         <div className="media post-block m-b-xs-30">
-            <a href="post-format-standard.html" className="align-self-center">
-                <img className=" m-r-xs-30" src="assets/images/trending-stories/trending-stories-4.jpg" alt="" />
+            <a href={news['news_link']} className="align-self-center">
+                <img className=" m-r-xs-30" src={news['img_link']} alt="" style={{ objectFit: "cover", height: "15rem" }} />
             </a>
             <div className="media-body">
                 <div className="post-cat-group m-b-xs-10">
-                    <a href="business.html" className="post-cat cat-btn bg-color-blue-three">RACING</a>
+                    <a href={news['news_link']} className="post-cat cat-btn bg-color-green-two">{news['news_website']}</a>
+                    { news?.trend?.trend_label.length>0 ? <a href={news['news_link']} className={news?.trend?.trend_label=='正面'?'post-cat cat-btn bg-color-green-one':'post-cat cat-btn bg-color-red-one'}>{news['trend']['trend_label']}</a>: ''}
+                    { news?.category?.category_label.length>0 ? <a href={news['news_link']} className="post-cat cat-btn bg-color-linkedin">{news['category']['category_label']}</a>: ''}
                 </div>
                 <h3 className="axil-post-title hover-line">
-                    <a href="post-format-standard.html">
-                        Kipchoge Proves He Has No Equal: Runs 2nd Fastest Marathon Time In History
+                    <a href={news['news_link']}>
+                        {news['news_title']}
                     </a>
                 </h3>
                 <div className="post-metas">
                     <ul className="list-inline">
-                        <li>By <a href="#">Sergio Pliego</a></li>
+                        <li>{news['news_datetime']}</li>
                     </ul>
                 </div>
             </div>
