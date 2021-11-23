@@ -1,5 +1,5 @@
 import axios from 'axios'
-const backend_SERVERURL = process.env.Heroku_backend
+const backend_SERVERURL = process.env.REACT_APP_Heroku_backend
 
 export const getNews = async () => {
     try {
