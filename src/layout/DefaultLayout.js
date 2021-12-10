@@ -1,21 +1,22 @@
 import React, { useState, useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
 import { SideNav, PageHeader, PageContent, PageFooter } from '../components/index'
 const WEBAPI = require('../WebAPI');
-const utils = require('../utils');
 
 const DefaultLayout = () => {
+  const dispatch = useDispatch();
   useEffect(() => {
-      async function fetch() {
-          let newslist = await WEBAPI.getNews()
-          if (newslist?.status != 200 || newslist?.data == "") {
-          } else {
-            newslist = newslist['data']['data']['news']
-            utils.setNews(JSON.stringify(newslist))
-          }
+    async function fetch() {
+      let result = await WEBAPI.getNews()
+      if (result?.status != 200 || result?.data == "") {
+      } else {
+        result = result['data']['data']['news']
+        dispatch({ type: 'set', newslist: JSON.stringify(result) })
       }
-      fetch()
+    }
+    fetch()
   }, []);
-  
+
   return (
     <div className="main-content">
       <SideNav />
