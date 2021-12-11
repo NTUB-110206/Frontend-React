@@ -1,5 +1,10 @@
 import React from 'react'
-const TrendPage =()=> {
-    return ("TrendPage")
+import TrendLayout from '../components/TrendLayout'
+const TrendPage = () => {
+    return (
+        <>
+            <TrendLayout />
+        </>
+    )
 }
 export default TrendPage
