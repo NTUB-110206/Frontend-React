@@ -139,8 +139,8 @@ const PageFooter = () => {
                     <div className="row align-items-center">
                         <div className="col-md">
                             <div className="footer-logo-container">
-                                <a href="index.html">
-                                    <img src="assets/images/logo-symbol.svg" alt="footer logo" className="footer-logo" />
+                                <a href="/">
+                                    <img src="components/BitCoin_logo2.png" alt="footer logo" className="footer-logo" />
                                 </a>
                             </div>
 
