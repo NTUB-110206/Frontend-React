@@ -13,7 +13,7 @@ const PageHeader = () => {
                         </div>
 
                         <div className="brand-logo-container col-md-4 text-center">
-                            <a href="index.html">
+                            <a href="/">
                                 <img src="components/BitCoin_logo2.png" alt="" className="brand-logo" />
                             </a>
                         </div>
@@ -41,7 +41,7 @@ const PageHeader = () => {
                         </div>
 
                         <div className="brand-logo-container text-center d-lg-none">
-                            <a href="index.html">
+                            <a href="/">
                                 <img src="components/BitCoin_logo2.png" alt="" className="brand-logo" />
                             </a>
                         </div>
