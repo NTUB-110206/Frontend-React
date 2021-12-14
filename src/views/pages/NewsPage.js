@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import LargeNewsLayout from '../components/LargeNewsLayout'
-import MediumNewsLayout from '../components/MediumNewsLayout'
 import SmallNewsLayout from '../components/SmallNewsLayout'
 import { useSelector } from 'react-redux'
 
@@ -20,7 +19,6 @@ const NewsPage = () => {
         <>
             {top_news.length > 0 ? <LargeNewsLayout newslist={top_news} /> : ''}
             {hot_news.length > 0 ? <SmallNewsLayout newslist={hot_news} /> : ''}
-            <MediumNewsLayout />
         </>
     )
 }
