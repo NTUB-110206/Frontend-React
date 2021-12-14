@@ -48,7 +48,7 @@ const PageHeader = () => {
 
                         <div className="main-nav-wrapper">
                             <ul className="main-navigation list-inline" id="main-menu">
-                                <li className="is-active"><a href="/">News</a></li>
+                                <li><Link to={"/news"}>News</Link></li>
                                 <li><Link to={"/trend"}>Trend</Link></li>
                                 <li><Link to={"/tutorial"}>Tutorial</Link></li>
                             </ul>

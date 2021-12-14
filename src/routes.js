@@ -6,6 +6,7 @@ const TutorialPage = React.lazy(() => import('./views/pages/TutorialPage'))
 
 const routes = [
   { path: '/', exact: true, name: 'NewsPage', component: NewsPage },
+  { path: '/news', exact: true, name: 'NewsPage', component: NewsPage },
   { path: '/trend', exact: true, name: 'TrendPage', component: TrendPage },
   { path: '/tutorial', exact: true, name: 'TutorialPage', component: TutorialPage },
 ]
