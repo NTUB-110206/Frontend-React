@@ -4,6 +4,7 @@ const initialState = {
   newslist: "[]",
   predict_price: "",
   predict_trend: "",
+  realtime_price: "[]",
 }
 
 const changeState = (state = initialState, { type, ...rest }) => {

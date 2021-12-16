@@ -24,8 +24,19 @@ const DefaultLayout = () => {
       dispatch({ type: 'set', predict_price: JSON.stringify(results[0]) })
       dispatch({ type: 'set', predict_trend: JSON.stringify(results[1]) })
     }
+
+    async function fetch_realtimePrice() {
+      let result = await WEBAPI.get_crypto_data()
+      console.log(result)
+      if (result?.status != 200 || result?.data == "") {
+      } else {
+        result = result['data']['Data']['Data']
+        dispatch({ type: 'set', realtime_price: JSON.stringify(result) })
+      }
+    }
     fetch_news()
     fetch_trend()
+    fetch_realtimePrice()
   }, []);
 
   return (

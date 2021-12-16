@@ -1,8 +1,11 @@
 import React from 'react'
 const TrendLayout = (props) => {
-    let { predict_trend, predict_price } = props
+    let { predict_trend, predict_price, realtime_price } = props
     predict_price = predict_price?.substring(0, 8)
     predict_trend = predict_trend?.replace(/\"/g,"")
+    let current_price = parseInt(realtime_price[1]?.close)
+    let yesterday_close = parseInt(realtime_price[0]?.close)
+    let spread_price = Math.round(((current_price - yesterday_close)/yesterday_close*100)*100)/100
     return (
         <>
             <section class="section-gap-top__with-text">
@@ -19,10 +22,10 @@ const TrendLayout = (props) => {
                                 
                                 <h2 class="axil-post-title hover-line">
                                     <span style={{color:"#333", fontSize: 2.5+"rem"}}>
-                                        $47,404.34 
+                                        $ {current_price?.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")}
                                     </span>
-                                    <span style={{color:"red", fontSize: 2.5+"rem", marginLeft:20+"px"}}>
-                                        -3.23%
+                                    <span style={{color:spread_price>=0?"red":"green", fontSize: 2.5+"rem", marginLeft:20+"px"}}>
+                                        {spread_price?.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")}%
                                     </span>
                                 </h2>
                                 <h2 class="axil-post-title hover-line">

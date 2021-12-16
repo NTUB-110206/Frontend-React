@@ -30,6 +30,16 @@ export const getClosedPrice_Predict = async () => {
         return handle_Error(error);
     }
 };
+
+export const get_crypto_data = async (fsym='BTC', tsym='USD', timeframe='day', limit=1, aggregate=1) => {
+    try {
+        let res = await axios.get('https://min-api.cryptocompare.com/data/v2/histo'+timeframe+'?fsym='+fsym+'&tsym='+tsym+'&limit='+limit+'&aggregate='+aggregate)
+        return res
+    } catch (error) {
+        return handle_Error(error);
+    }
+};
+
 const handle_Error = (error) => {
     console.log("WEBAPI error")
     if (error.response) {
