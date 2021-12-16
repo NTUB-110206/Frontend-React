@@ -10,7 +10,7 @@ const DefaultLayout = () => {
       let result = await WEBAPI.getNews()
       if (result?.status != 200 || result?.data == "") {
       } else {
-        result = result['data']['data']['news']
+        result = utils.arrUnique(result['data']['data']['news'], 'news_title')
         dispatch({ type: 'set', newslist: JSON.stringify(result) })
       }
     }

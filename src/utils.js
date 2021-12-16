@@ -8,4 +8,15 @@ export const getNews = () => {
     return localStorage.getItem("News");
 };
 
+
+
 export const clear = () => localStorage.clear();
+
+export const arrUnique = (arr, key) => {
+    const result = arr.filter((thing, index, self) =>
+        index === self.findIndex((t) => (
+            t[key] === thing[key]
+        ))
+    )
+    return result
+};
