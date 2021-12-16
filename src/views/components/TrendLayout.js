@@ -1,5 +1,8 @@
 import React from 'react'
-const TrendLayout = () => {
+const TrendLayout = (props) => {
+    let { predict_trend, predict_price } = props
+    predict_price = predict_price?.substring(0, 8)
+    predict_trend = predict_trend?.replace(/\"/g,"")
     return (
         <>
             <section class="section-gap-top__with-text">
@@ -23,7 +26,7 @@ const TrendLayout = () => {
                                     </span>
                                 </h2>
                                 <h2 class="axil-post-title hover-line">
-                                    Predict $89387
+                                    Predict ${predict_price?.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")}
                                 </h2>
                                 <div class="add-block-widget m-b-xs-40">
                                     <a href="/news">
@@ -35,7 +38,7 @@ const TrendLayout = () => {
                             </div>
                         </div>
                         <div class="col-lg-8">
-                            <img src="https://i.imgur.com/In3aD1W.jpeg" alt="" class="img-fluid" width="1400" height="1000" />
+                            <img src={predict_trend} alt="" class="img-fluid" width="1400" height="1000" />
                         </div>
                     </div>
                 </div>

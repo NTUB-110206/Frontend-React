@@ -1,5 +1,6 @@
 import axios from 'axios'
 const backend_SERVERURL = process.env.REACT_APP_Heroku_backend
+const nlp_SERVERURL = process.env.REACT_APP_Heroku_NLPService
 
 export const getNews = async () => {
     try {
@@ -12,6 +13,23 @@ export const getNews = async () => {
     }
 };
 
+export const getClosedPricePic_Predict = async () => {
+    try {
+        let res = await axios.get(nlp_SERVERURL + `/ClosedPricePic_Predict`)
+        return res
+    } catch (error) {
+        return handle_Error(error);
+    }
+};
+
+export const getClosedPrice_Predict = async () => {
+    try {
+        let res = await axios.get(nlp_SERVERURL + `/ClosedPrice_Predict`)
+        return res
+    } catch (error) {
+        return handle_Error(error);
+    }
+};
 const handle_Error = (error) => {
     console.log("WEBAPI error")
     if (error.response) {

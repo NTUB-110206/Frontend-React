@@ -15,7 +15,17 @@ const DefaultLayout = () => {
         dispatch({ type: 'set', newslist: JSON.stringify(result) })
       }
     }
+
+    async function fetch_trend() {
+      const tasks = [WEBAPI.getClosedPrice_Predict(), WEBAPI.getClosedPricePic_Predict()]
+      const res_list = await Promise.allSettled(tasks);
+      let results = res_list?.map(res => res?.value?.data?.result)
+      console.log(results)
+      dispatch({ type: 'set', predict_price: JSON.stringify(results[0]) })
+      dispatch({ type: 'set', predict_trend: JSON.stringify(results[1]) })
+    }
     fetch_news()
+    fetch_trend()
   }, []);
 
   return (

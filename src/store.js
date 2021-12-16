@@ -2,6 +2,8 @@ import { createStore } from 'redux'
 
 const initialState = {
   newslist: "[]",
+  predict_price: "",
+  predict_trend: "",
 }
 
 const changeState = (state = initialState, { type, ...rest }) => {
