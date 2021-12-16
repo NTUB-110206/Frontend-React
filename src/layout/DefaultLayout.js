@@ -27,7 +27,6 @@ const DefaultLayout = () => {
 
     async function fetch_realtimePrice() {
       let result = await WEBAPI.get_crypto_data()
-      console.log(result)
       if (result?.status != 200 || result?.data == "") {
       } else {
         result = result['data']['Data']['Data']
