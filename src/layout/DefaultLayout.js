@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { SideNav, PageHeader, PageContent, PageFooter } from '../components/index'
 const WEBAPI = require('../WebAPI');
+const utils = require('../utils');
 
 const DefaultLayout = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-    async function fetch() {
+    async function fetch_news() {
       let result = await WEBAPI.getNews()
       if (result?.status != 200 || result?.data == "") {
       } else {
@@ -14,7 +15,7 @@ const DefaultLayout = () => {
         dispatch({ type: 'set', newslist: JSON.stringify(result) })
       }
     }
-    fetch()
+    fetch_news()
   }, []);
 
   return (
